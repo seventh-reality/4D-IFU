@@ -423,6 +423,21 @@
           </div> 
          <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C09TQ43VP"></script>
+     <script>
+function play_to_end (){
+//play to end or rewind if animation is at end//
+	const modelViewer = document.querySelector('#toggle-model');
+	modelViewer.play();
+	t=modelViewer.duration;
+	t=t*1000/2 ;// because duration is in second and time to play and rewind//
+	setTimeout(stop, t);
+}
+function stop(){
+const modelViewer = document.querySelector('#toggle-model');
+modelViewer.pause();
+}
+
+</script>             
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
